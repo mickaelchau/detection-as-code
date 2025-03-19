@@ -5,3 +5,6 @@ Test the pipeline
 - GCS_BUCKET (where you tfstate is hosted)
 - SECOPS_INSTANCE_ID (Instance ID of SecOps)
 - SECOPS_INSTANCE_REGION (Instance Region of SecOps)
+
+2. Create a new / Change an exisiting YARA-L rules under folder rules/
+3. Push the changes in the **master branch**
