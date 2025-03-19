@@ -36,4 +36,7 @@ jobs:
       - name: Apply Terraform Configuration
         run: |
           cd terraform/dac-deployment-automation
-          terraform apply -auto-approve
+          terraform apply -auto-approve \
+            -var "secops_instance_region=${{ secrets.SECOPS_INSTANCE_REGION }}" \
+            -var "secops_instance_id=${{ secrets.SECOPS_INSTANCE_ID }}" \
+            -var "gcp_project_id=${{ secrets.GCP_PROJECT_ID }}"

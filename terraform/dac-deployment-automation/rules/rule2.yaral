@@ -1,0 +1,11 @@
+rule rule2_tf {
+        meta:
+            author = "securityuser"
+            description = "single event rule that should generate detections"
+
+        events:
+            $e.metadata.event_type = "NETWORK_DNS"
+
+        condition:
+            $e
+    }
