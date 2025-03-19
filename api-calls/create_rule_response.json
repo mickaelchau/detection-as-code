@@ -1,0 +1,14 @@
+{
+  "ruleId": "ru_f7c5870b-3ad2-4f4d-afb4-7cfe640a36fe",
+  "versionId": "ru_f7c5870b-3ad2-4f4d-afb4-7cfe640a36fe@v_1742210517_637855000",
+  "ruleName": "mySecondTestRule",
+  "metadata": {
+    "description": "single event rule that should generate detections",
+    "author": "securityuser"
+  },
+  "ruleText": "rule mySecondTestRule {\n        meta:\n            author = \"securityuser\"\n            description = \"single event rule that should generate detections\"\n\n        events:\n            $e.metadata.event_type = \"NETWORK_DNS\"\n\n        condition:\n            $e\n    }\n",
+  "versionCreateTime": "2025-03-17T11:21:57.637855Z",
+  "compilationState": "SUCCEEDED",
+  "ruleType": "SINGLE_EVENT",
+  "lastAlertStatusChangeTime": "2025-03-17T11:21:57.637855Z"
+}
