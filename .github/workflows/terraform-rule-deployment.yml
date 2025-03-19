@@ -3,9 +3,7 @@ name: Terraform Rule Deployment
 on:
   push:
     branches:
-      - master
-    paths:
-      - 'terraform/dac-deployment-automation/**'  # Trigger only if files in secops-dac change
+      - master  
 
 jobs:
   terraform:
@@ -28,14 +26,12 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          cd terraform/dac-deployment-automation
           terraform init \
             -backend-config="bucket=${{ secrets.GCS_BUCKET }}" \
             -backend-config="prefix=terraform/state"
 
       - name: Apply Terraform Configuration
         run: |
-          cd terraform/dac-deployment-automation
           terraform apply -auto-approve \
             -var "secops_instance_region=${{ secrets.SECOPS_INSTANCE_REGION }}" \
             -var "secops_instance_id=${{ secrets.SECOPS_INSTANCE_ID }}" \
