@@ -6,5 +6,5 @@ terraform {
 }
 
 provider "google-beta" {
-  project = var.project_id # Put your Project ID
+  project = var.gcp_project_id # Put your Project ID
 }
