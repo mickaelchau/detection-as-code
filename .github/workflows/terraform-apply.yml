@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'terraform/secops-dac/**'  # Trigger only if files in secops-dac change
+      - 'terraform/dac-deployment-automation/**'  # Trigger only if files in secops-dac change
 
 jobs:
   terraform:
@@ -28,12 +28,12 @@ jobs:
 
       - name: Initialize Terraform
         run: |
-          cd terraform/secops-dac
+          cd terraform/dac-deployment-automation
           terraform init \
             -backend-config="bucket=${{ secrets.GCS_BUCKET }}" \
             -backend-config="prefix=terraform/state"
 
       - name: Apply Terraform Configuration
         run: |
-          cd terraform/secops-dac
+          cd terraform/dac-deployment-automation
           terraform apply -auto-approve
