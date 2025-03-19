@@ -9,3 +9,5 @@ Test the pipeline
 2. Create a new / Change an exisiting YARA-L rules under folder rules/
    
 3. Push the changes in the **master branch**
+
+4. Go back to your SecOps instance => if everything goes well, you should see your new rules!
