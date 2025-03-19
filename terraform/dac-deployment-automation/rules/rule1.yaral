@@ -4,7 +4,7 @@ rule rule1_tf {
             description = "single event rule that should generate detections"
 
         events:
-            $e.metadata.event_type = "NETWORK_DNS"
+            $e.metadata.event_type = "USER_LOGIN"
 
         condition:
             $e
