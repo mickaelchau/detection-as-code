@@ -1,6 +1,6 @@
 rule rule1_tf {
         meta:
-            author = "securityuser"
+            author = "vincent"
             description = "single event rule that should generate detections"
 
         events:
